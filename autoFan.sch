@@ -1,0 +1,418 @@
+EESchema Schematic File Version 4
+LIBS:autoFan-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:MC34063AD U3
+U 1 1 5F032622
+P 4750 5150
+F 0 "U3" H 4750 5617 50  0000 C CNN
+F 1 "MC34063AD" H 4750 5526 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4800 4700 50  0001 L CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/MC34063A-D.PDF" H 5250 5050 50  0001 C CNN
+	1    4750 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5F03587E
+P 7250 6100
+F 0 "H2" H 7350 6146 50  0000 L CNN
+F 1 "Strain-" H 7350 6055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 7250 6100 50  0001 C CNN
+F 3 "~" H 7250 6100 50  0001 C CNN
+	1    7250 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5F035B6A
+P 6800 6100
+F 0 "H1" H 6900 6146 50  0000 L CNN
+F 1 "Strain+" H 6900 6055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 6800 6100 50  0001 C CNN
+F 3 "~" H 6800 6100 50  0001 C CNN
+	1    6800 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J2
+U 1 1 5F035F02
+P 7250 5800
+F 0 "J2" H 7278 5776 50  0000 L CNN
+F 1 "Fan" H 7278 5685 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 7250 5800 50  0001 C CNN
+F 3 "~" H 7250 5800 50  0001 C CNN
+	1    7250 5800
+	1    0    0    -1  
+$EndComp
+Text GLabel 7050 5900 0    50   Input ~ 6
+GND
+$Comp
+L Connector:USB_A J1
+U 1 1 5F036E86
+P 1800 3100
+F 0 "J1" H 1857 3567 50  0000 C CNN
+F 1 "USB_A" H 1857 3476 50  0000 C CNN
+F 2 "Connector_USB:USB_A_PCBEDGE" H 1950 3050 50  0001 C CNN
+F 3 " ~" H 1950 3050 50  0001 C CNN
+	1    1800 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Thermistor_NTC TH1
+U 1 1 5F038083
+P 1150 5350
+F 0 "TH1" H 1248 5396 50  0000 L CNN
+F 1 "100k" H 1248 5305 50  0000 L CNN
+F 2 "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P2.54mm_Vertical_Vishay_IM-1" H 1150 5400 50  0001 C CNN
+F 3 "~" H 1150 5400 50  0001 C CNN
+	1    1150 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5F038C8D
+P 1150 4550
+F 0 "R1" H 1220 4596 50  0000 L CNN
+F 1 "100k" H 1220 4505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1080 4550 50  0001 C CNN
+F 3 "~" H 1150 4550 50  0001 C CNN
+	1    1150 4550
+	1    0    0    -1  
+$EndComp
+Text GLabel 3000 2900 2    50   Input ~ 6
+5V
+Text GLabel 1850 3550 2    50   Input ~ 6
+GND
+Wire Wire Line
+	1850 3550 1800 3550
+Wire Wire Line
+	1700 3550 1700 3500
+Wire Wire Line
+	1800 3500 1800 3550
+Connection ~ 1800 3550
+Wire Wire Line
+	1800 3550 1700 3550
+Text GLabel 1150 5500 0    50   Input ~ 6
+GND
+Text GLabel 1150 4400 0    50   Input ~ 6
+5V
+$Comp
+L Regulator_Linear:LM317_3PinPackage U1
+U 1 1 5F0415F2
+P 2550 2900
+F 0 "U1" H 2550 3142 50  0000 C CNN
+F 1 "LM317_3PinPackage" H 2550 3051 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 2550 3150 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 2550 2900 50  0001 C CNN
+	1    2550 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5F047FDC
+P 2900 3050
+F 0 "C2" H 3015 3096 50  0000 L CNN
+F 1 "0.1u" H 3015 3005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2938 2900 50  0001 C CNN
+F 3 "~" H 2900 3050 50  0001 C CNN
+	1    2900 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5F0484A1
+P 2200 3050
+F 0 "C1" H 2315 3096 50  0000 L CNN
+F 1 "0.1u" H 2315 3005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2238 2900 50  0001 C CNN
+F 3 "~" H 2200 3050 50  0001 C CNN
+	1    2200 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 2900 2200 2900
+Connection ~ 2200 2900
+Wire Wire Line
+	2200 2900 2100 2900
+Wire Wire Line
+	2200 3200 2550 3200
+Connection ~ 2550 3200
+Wire Wire Line
+	2550 3200 2900 3200
+Wire Wire Line
+	2850 2900 2900 2900
+Connection ~ 2900 2900
+Wire Wire Line
+	2900 2900 3000 2900
+Text GLabel 2550 3200 3    50   Input ~ 6
+GND
+$Comp
+L Device:Q_NMOS_GSD Q1
+U 1 1 5F0524C9
+P 4050 4650
+F 0 "Q1" H 4256 4696 50  0000 L CNN
+F 1 "AO3400A" H 4256 4605 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4250 4750 50  0001 C CNN
+F 3 "~" H 4050 4650 50  0001 C CNN
+	1    4050 4650
+	1    0    0    -1  
+$EndComp
+Text GLabel 4750 5650 3    50   Input ~ 6
+GND
+Text GLabel 4150 4400 1    50   Input ~ 6
+5V
+Wire Wire Line
+	4150 4400 4150 4450
+Wire Wire Line
+	4150 4850 4150 4950
+Wire Wire Line
+	4150 4950 4300 4950
+$Comp
+L Device:R R3
+U 1 1 5F05B3B3
+P 5250 4750
+F 0 "R3" H 5320 4796 50  0000 L CNN
+F 1 "0.1" H 5320 4705 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5180 4750 50  0001 C CNN
+F 3 "~" H 5250 4750 50  0001 C CNN
+	1    5250 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 4600 4300 4600
+Wire Wire Line
+	4300 4600 4300 4950
+Connection ~ 4300 4950
+Wire Wire Line
+	4300 4950 4350 4950
+Wire Wire Line
+	5250 4900 5250 4950
+Wire Wire Line
+	5250 4950 5150 4950
+$Comp
+L Device:R R5
+U 1 1 5F05C2A5
+P 5350 5050
+F 0 "R5" V 5143 5050 50  0000 C CNN
+F 1 "82" V 5234 5050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5280 5050 50  0001 C CNN
+F 3 "~" H 5350 5050 50  0001 C CNN
+	1    5350 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 5050 5200 5050
+Wire Wire Line
+	5500 5050 5500 4600
+Wire Wire Line
+	5500 4600 5250 4600
+Connection ~ 5250 4600
+$Comp
+L Device:L L1
+U 1 1 5F05DE92
+P 5600 5200
+F 0 "L1" H 5652 5246 50  0000 L CNN
+F 1 "170u" H 5652 5155 50  0000 L CNN
+F 2 "Inductor_SMD:L_Bourns_SRR1210A" H 5600 5200 50  0001 C CNN
+F 3 "~" H 5600 5200 50  0001 C CNN
+	1    5600 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 5050 5500 5050
+Connection ~ 5500 5050
+Wire Wire Line
+	5600 5350 5550 5350
+Wire Wire Line
+	5550 5350 5550 5150
+Wire Wire Line
+	5550 5150 5150 5150
+Text GLabel 5150 5350 2    50   Input ~ 6
+GND
+$Comp
+L Device:D D1
+U 1 1 5F05FAC8
+P 5550 5550
+F 0 "D1" V 5596 5471 50  0000 R CNN
+F 1 "D" V 5505 5471 50  0000 R CNN
+F 2 "Diode_SMD:D_SMA" H 5550 5550 50  0001 C CNN
+F 3 "~" H 5550 5550 50  0001 C CNN
+	1    5550 5550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 5400 5550 5350
+Connection ~ 5550 5350
+$Comp
+L Device:C C4
+U 1 1 5F060C43
+P 5550 5900
+F 0 "C4" H 5665 5946 50  0000 L CNN
+F 1 "33p" H 5665 5855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5588 5750 50  0001 C CNN
+F 3 "~" H 5550 5900 50  0001 C CNN
+	1    5550 5900
+	1    0    0    -1  
+$EndComp
+Text GLabel 5550 6050 3    50   Input ~ 6
+GND
+Wire Wire Line
+	5550 5750 5550 5700
+$Comp
+L Device:R R4
+U 1 1 5F061C67
+P 5300 5750
+F 0 "R4" V 5093 5750 50  0000 C CNN
+F 1 "13k" V 5184 5750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5230 5750 50  0001 C CNN
+F 3 "~" H 5300 5750 50  0001 C CNN
+	1    5300 5750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F0626C3
+P 5100 5950
+F 0 "R2" H 5170 5996 50  0000 L CNN
+F 1 "1.5k" H 5170 5905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5030 5950 50  0001 C CNN
+F 3 "~" H 5100 5950 50  0001 C CNN
+	1    5100 5950
+	1    0    0    -1  
+$EndComp
+Text GLabel 5100 6100 0    50   Input ~ 6
+GND
+Wire Wire Line
+	5450 5750 5550 5750
+Connection ~ 5550 5750
+Wire Wire Line
+	5150 5750 5100 5750
+Wire Wire Line
+	5100 5750 5100 5800
+Wire Wire Line
+	5150 5450 5150 5550
+Wire Wire Line
+	5150 5550 5100 5550
+Wire Wire Line
+	5100 5550 5100 5750
+Connection ~ 5100 5750
+$Comp
+L Device:C C3
+U 1 1 5F064775
+P 4300 5550
+F 0 "C3" H 4415 5596 50  0000 L CNN
+F 1 "1.5n" H 4415 5505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4338 5400 50  0001 C CNN
+F 3 "~" H 4300 5550 50  0001 C CNN
+	1    4300 5550
+	1    0    0    -1  
+$EndComp
+Text GLabel 4300 5700 0    50   Input ~ 6
+GND
+Wire Wire Line
+	4300 5400 4300 5350
+Wire Wire Line
+	4300 5350 4350 5350
+$Comp
+L Device:C C5
+U 1 1 5F0663D7
+P 6150 5900
+F 0 "C5" H 6265 5946 50  0000 L CNN
+F 1 "10p" H 6265 5855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6188 5750 50  0001 C CNN
+F 3 "~" H 6150 5900 50  0001 C CNN
+	1    6150 5900
+	1    0    0    -1  
+$EndComp
+Text GLabel 6100 6050 0    50   Input ~ 6
+GND
+Wire Wire Line
+	6100 6050 6150 6050
+Wire Wire Line
+	7050 5800 7050 5750
+Wire Wire Line
+	7050 5750 6150 5750
+Connection ~ 6150 5750
+$Comp
+L MCU_Microchip_ATmega:ATmega328P-AU U2
+U 1 1 5F048950
+P 2850 5850
+F 0 "U2" H 2850 4261 50  0000 C CNN
+F 1 "ATmega328P-AU" H 2850 4170 50  0000 C CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 2850 5850 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 2850 5850 50  0001 C CNN
+	1    2850 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 4700 1150 4850
+Text GLabel 2250 4650 0    50   Input ~ 6
+5V
+Wire Wire Line
+	2250 4850 1150 4850
+Connection ~ 1150 4850
+Wire Wire Line
+	1150 4850 1150 5200
+Wire Wire Line
+	3450 4650 3850 4650
+Text GLabel 2800 4300 0    50   Input ~ 6
+5V
+Wire Wire Line
+	2800 4300 2850 4300
+Wire Wire Line
+	2950 4300 2950 4350
+Wire Wire Line
+	2850 4350 2850 4300
+Connection ~ 2850 4300
+Wire Wire Line
+	2850 4300 2950 4300
+Text GLabel 2850 7350 0    50   Input ~ 6
+GND
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J3
+U 1 1 5F056E01
+P 6250 3650
+F 0 "J3" H 6300 3967 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 6300 3876 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 6250 3650 50  0001 C CNN
+F 3 "~" H 6250 3650 50  0001 C CNN
+	1    6250 3650
+	1    0    0    -1  
+$EndComp
+Text GLabel 6050 3550 0    50   Input ~ 6
+MISO
+Text GLabel 6550 3550 2    50   Input ~ 6
+5V
+Text GLabel 6050 3650 0    50   Input ~ 6
+SCK
+Text GLabel 6550 3650 2    50   Input ~ 6
+MOSI
+Text GLabel 6050 3750 0    50   Input ~ 6
+RESET
+Text GLabel 6550 3750 2    50   Input ~ 6
+GND
+Text GLabel 3450 5050 2    50   Input ~ 6
+MISO
+Text GLabel 3450 5150 2    50   Input ~ 6
+SCK
+Text GLabel 3450 6150 2    50   Input ~ 6
+RESET
+Text GLabel 3450 4950 2    50   Input ~ 6
+MOSI
+Wire Wire Line
+	5550 5750 6150 5750
+$EndSCHEMATC

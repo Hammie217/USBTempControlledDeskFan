@@ -1,0 +1,5 @@
+Other required components:
+100k Thermistor
+A 12V fan
+A roughly 180uH inductor
+a 2x3 programming header
